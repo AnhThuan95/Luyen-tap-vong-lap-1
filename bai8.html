@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<h3>Day la tro choi doan so ngau nhien.</h3>
+<p>Dau tien ban nhap vao khoang ma ban muon doan.</p>
+<p>Sau do ban doan mot so trong khoang do.</p>
+<p>Neu ban doan dung, ban se thang!</p>
+<p>Ban co 3 lan doan nhe.</p>
+<button onclick="doanSo()">Choi!</button>
+
+<script>
+    function doanSo() {
+        let min = parseInt(prompt("Nhap gioi han duoi: "));
+        let max = parseInt(prompt("Nhap gioi han tren: "));
+        let x = Math.floor(Math.random()*max) + min;
+        let i = 0;
+        let a = false;
+        for (i; i < 3; i++) {
+            let doanSo = parseInt(prompt("Ban co " + (3 - i) +" luot. Nhap vao so ban doan: "));
+            if (doanSo == x) {
+                a = true;
+                break;
+            }
+        }
+        if (a) {
+            alert("Ban da doan dung!");
+        } else {
+            alert("Doan sai roi nhe :P");
+        }
+    }
+</script>
+
+</body>
+</html>
